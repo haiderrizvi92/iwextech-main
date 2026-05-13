@@ -48,14 +48,14 @@ export function Contact() {
                   <Phone className="h-4 w-4 text-cyan-glow mt-0.5" />
                   <div>
                     <div className="text-xs text-muted-foreground">Phone</div>
-                    <div className="text-sm">+92 300 0000000</div>
+                    <div className="text-sm">+92 305 5455983</div>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin className="h-4 w-4 text-cyan-glow mt-0.5" />
                   <div>
                     <div className="text-xs text-muted-foreground">Office</div>
-                    <div className="text-sm">Karachi · Pakistan</div>
+                    <div className="text-sm">Islamabad · Pakistan</div>
                   </div>
                 </li>
               </ul>
@@ -63,9 +63,9 @@ export function Contact() {
             <div className="rounded-2xl bg-crimson-grad p-6 glow-crimson">
               <div className="text-sm font-semibold text-white mb-2">Talk to an expert</div>
               <p className="text-xs text-white/80 mb-4">Free 30-minute consultation with a senior engineer — no sales calls.</p>
-              <a href="#" className="inline-flex items-center gap-2 text-sm font-medium text-white">
-                Schedule now <ArrowRight className="h-4 w-4" />
-              </a>
+            <a href="https://calendly.com/saadfarooqi4797/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-white">
+               Schedule now <ArrowRight className="h-4 w-4" />
+            </a>
             </div>
           </motion.div>
 
