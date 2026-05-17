@@ -31,7 +31,7 @@ export function Footer() {
           {[
             { title: "Services", items: ["AI Internal Tools", "Dashboards & Reporting", "CRM & Workflows", "Cloud Deployment", "DevOps"] },
             { title: "Company", items: ["About", "Solutions", "Technologies", "Careers", "Contact"] },
-            { title: "Contact", items: ["hello@iwextechnicity.com", "+92 300 0000000", "Karachi, Pakistan", "SECP Registered"] },
+            { title: "Contact", items: ["info@iwextech.com", "+92 305 5455983", "Bahria Town, Phase 4, Islamabad, Pakistan", "SECP Registered"] },
           ].map((col) => (
             <div key={col.title}>
               <div className="text-sm font-semibold mb-4">{col.title}</div>

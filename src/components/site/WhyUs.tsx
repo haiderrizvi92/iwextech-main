@@ -1,32 +1,12 @@
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
-
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
-  const mv = useMotionValue(0);
-  const spring = useSpring(mv, { duration: 1800, bounce: 0 });
-
-  useEffect(() => {
-    if (inView) mv.set(to);
-  }, [inView, to, mv]);
-
-  useEffect(() => {
-    return spring.on("change", (v) => {
-      if (ref.current) ref.current.textContent = Math.floor(v).toLocaleString() + suffix;
-    });
-  }, [spring, suffix]);
-
-  return <span ref={ref}>0{suffix}</span>;
-}
+import { motion } from "framer-motion";
 
 const stats = [
-  { v: 87, suffix: "%", label: "Faster reporting cycles" },
-  { v: 65, suffix: "%", label: "Reduction in manual work" },
-  { v: 4, suffix: "x", label: "Better decision velocity" },
-  { v: 120, suffix: "+", label: "AI workflows deployed" },
-  { v: 99, suffix: "%", label: "Centralised visibility" },
-  { v: 40, suffix: "+", label: "Enterprise clients served" },
+  { v: "3+", label: "Years Combined AI Experience" },
+  { v: "100%", label: "Client Satisfaction" },
+  { v: "48hr", label: "Rapid Deployment" },
+  { v: "24/7", label: "System Uptime" },
+  { v: "Full Stack", label: "AI + Cloud Expertise" },
+  { v: "SECP", label: "Registered Company" },
 ];
 
 export function WhyUs() {
@@ -41,7 +21,7 @@ export function WhyUs() {
         >
           <div className="text-[10px] tracking-[0.3em] text-cyan-glow font-medium mb-4">WHY IWEX</div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight">
-            Outcomes our clients <span className="text-gradient-crimson">actually measure</span>
+            What we <span className="text-gradient-crimson">deliver on every project</span>
           </h2>
         </motion.div>
 
@@ -56,7 +36,7 @@ export function WhyUs() {
               <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-crimson/20 blur-3xl" />
               <div className="relative">
                 <div className="text-5xl font-bold text-gradient mb-2 font-display">
-                  <Counter to={s.v} suffix={s.suffix} />
+                  {s.v}
                 </div>
                 <div className="text-sm text-muted-foreground">{s.label}</div>
               </div>
